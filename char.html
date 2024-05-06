@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>char count</title>
+</head>
+<body>
+    <h3><span id="counter">0</span></h3>
+<textarea name="text" id="hello"></textarea>
+<button>Reset</button>
+<script>
+    let body=document.querySelector("body");
+    body.style.backgroundColor="pink"
+
+    let counter=document.querySelector("#counter");
+    let h3=document.querySelector("h3");
+    let btn=document.querySelector("button")
+    
+
+    let text=document.querySelector("#hello");
+    text.addEventListener("input",function(){
+        counter.textContent=text.value.length;
+        h3.append(counter);
+    })
+
+    btn.addEventListener("click",function(){
+         text.value="";
+         h3.innerText=0;
+    })
+
+</script>
+</body>
+</html>
